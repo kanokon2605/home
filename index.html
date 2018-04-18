@@ -26,12 +26,12 @@
   </style>
 </head>
 
-<body >
+<body>
   <!-- Links (sit on top) -->
   <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
       <div class="w3-col s3">
-        <a href="https://kanokon2605.github.io/home/" class="w3-button w3-block w3-black">HOME</a>
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
       </div>
       <div class="w3-col s3">
         <a href="#about" class="w3-button w3-block w3-black">DIARY</a>
@@ -63,7 +63,7 @@
     <div class="w3-row w3-padding-64" id="about">
       <div class="w3-row w3-padding-64" id="about">
         <div class="w3-col m6 w3-padding-large w3-hide-small">
-          <img src="a.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750" class="w3-round w3-image " > </div>
+          <img src="a.jpg" alt="Table Setting" width="600" height="750" class="w3-round w3-image "> </div>
         <div class="w3-col m6 w3-padding-large">
           <h1 class="w3-center">About Catering</h1>
           <br>
@@ -76,7 +76,7 @@
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
         <img src="30741844_1662706843818669_3042091152112091136_n (1).jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-        <div class="w3-container w3-white">
+        <div class="w3-container w3-white" >
           <p>
             <b>Lorem Ipsum</b>
           </p>
@@ -103,41 +103,6 @@
       </div>
     </div>
   </div>
-  <!-- Add Google Maps -->
-  <script>
-    function myMap()
-    {
-      myCenter=new google.maps.LatLng(41.878114, -87.629798);
-      var mapOptions= {
-        center:myCenter,
-        zoom:12, scrollwheel: false, draggable: false,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-    
-      var marker = new google.maps.Marker({
-        position: myCenter,
-      });
-      marker.setMap(map);
-    }
-    
-    // Tabbed Menu
-    function openMenu(evt, menuName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("menu");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < x.length; i++) {
-         tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-      }
-      document.getElementById(menuName).style.display = "block";
-      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-    }
-    document.getElementById("myLink").click();
-  </script>
-  <script src="https://goo.gl/maps/p6Efc7xEvyD2"></script>
 </body>
 
 </html>
