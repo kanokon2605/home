@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+      body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/w3images/coffeehouse.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+  </style>
+</head>
+
+<body >
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#about" class="w3-button w3-block w3-black">DIARY</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#where" class="w3-button w3-block w3-black">ABOUT US</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#where" class="w3-button w3-block w3-black">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">the
+        <br>Cafe</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="../../New folder (4)/a.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750"> </div>
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">About Catering</h1>
+          <br>
+          <h5 class="w3-center">Tradition since 1889</h5>
+          <p class="w3-large">Story 1
+            <span class="w3-tag w3-light-grey">seasonal</span> ..</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="../../New folder (4)/30741844_1662706843818669_3042091152112091136_n (1).jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p>
+            <b>Lorem Ipsum</b>
+          </p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="../../New folder (4)/30716092_1661418530614167_4256335748799660032_n.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p>
+            <b>Lorem Ipsum</b>
+          </p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="../../New folder (4)/30743063_1664900320265988_1363144958151753728_n.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p>
+            <b>Lorem Ipsum</b>
+          </p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Google Maps -->
+  <script>
+    function myMap()
+    {
+      myCenter=new google.maps.LatLng(41.878114, -87.629798);
+      var mapOptions= {
+        center:myCenter,
+        zoom:12, scrollwheel: false, draggable: false,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+    
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
+    
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+  </script>
+  <script src="https://goo.gl/maps/p6Efc7xEvyD2"></script>
+</body>
+
+</html>
